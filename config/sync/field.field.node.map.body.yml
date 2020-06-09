@@ -1,0 +1,23 @@
+uuid: 2056338d-a36b-4b3b-9adc-e8c280a5f9e5
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.map
+  module:
+    - text
+id: node.map.body
+field_name: body
+entity_type: node
+bundle: map
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

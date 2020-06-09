@@ -1,0 +1,10 @@
+uuid: d209baac-e168-4e87-b745-07c9462b5566
+langcode: vi
+status: true
+dependencies:
+  module:
+    - menu_link_content
+id: menu_link_content.token
+label: Token
+targetEntityType: menu_link_content
+cache: true

@@ -1,0 +1,20 @@
+uuid: 9024a523-d1a4-4843-8d41-4f1f95bf1005
+langcode: vi
+status: false
+dependencies:
+  theme:
+    - wosh
+_core:
+  default_config_hash: d_rNcREqGV_zYiT9SioXBL7CF74Xtp-B_f6FpFqn0ek
+id: wosh_page_title
+theme: wosh
+region: page_title
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

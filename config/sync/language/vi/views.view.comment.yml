@@ -1,0 +1,81 @@
+label: 'Bình luận'
+display:
+  default:
+    display_title: Chính
+    display_options:
+      exposed_form:
+        options:
+          submit_button: 'Áp dụng'
+          reset_button_label: 'Thiết lập lại'
+          exposed_sorts_label: 'Sắp xếp theo'
+          sort_asc_label: 'Tăng dần'
+          sort_desc_label: 'Giảm dần'
+      pager:
+        options:
+          tags:
+            previous: '‹ trước'
+            next: 'sau ›'
+            first: '« đầu'
+            last: 'cuối »'
+          expose:
+            items_per_page_label: 'Số mục trên một trang'
+            items_per_page_options_all_label: '- Tất cả -'
+            offset_label: 'Độ dịch'
+      fields:
+        comment_bulk_form:
+          action_title: 'Thao tác'
+        subject:
+          label: 'Tiêu đề'
+        name:
+          label: 'Tác giả'
+        entity_id:
+          label: 'Đã gửi bài trong'
+        changed:
+          label: 'Đã cập nhật'
+        operations:
+          label: 'Thao tác'
+      filters:
+        subject:
+          expose:
+            label: 'Tiêu đề'
+        combine:
+          expose:
+            label: 'Tên tác giả'
+        langcode:
+          expose:
+            label: 'Ngôn ngữ'
+      title: 'Bình luận'
+      empty:
+        area_text_custom:
+          content: 'Không có bài bình luận nào.'
+      use_more_text: thêm
+  page_published:
+    display_title: 'Các bình luận đã được đăng'
+    display_options:
+      menu:
+        title: 'Bình luận'
+  page_unapproved:
+    display_title: 'Các bình luận chưa xét duyệt'
+    display_options:
+      menu:
+        title: 'Các bình luận chưa xét duyệt'
+      filters:
+        subject:
+          expose:
+            label: 'Tiêu đề'
+        langcode:
+          expose:
+            label: 'Ngôn ngữ'
+      fields:
+        comment_bulk_form:
+          action_title: 'Thao tác'
+        subject:
+          label: 'Tiêu đề'
+        name:
+          label: 'Tác giả'
+        entity_id:
+          label: 'Đã gửi bài trong'
+        changed:
+          label: 'Đã cập nhật'
+        operations:
+          label: 'Thao tác'

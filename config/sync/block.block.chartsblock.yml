@@ -1,0 +1,77 @@
+uuid: ba4b8789-5152-444c-a51c-e35a76e63b72
+langcode: vi
+status: true
+dependencies:
+  module:
+    - charts_blocks
+    - system
+  theme:
+    - wosh
+id: chartsblock
+theme: wosh
+region: content
+weight: 0
+provider: null
+plugin: charts_block
+settings:
+  id: charts_block
+  label: 'Charts block'
+  provider: charts_blocks
+  label_display: visible
+  library: highcharts
+  type: column
+  series: 1
+  data: '3,4,5,4,5,6'
+  color:
+    - '#8f3289'
+  data_series: '{"name":"Can hộ A","color":"#0d233a","data":[30,60,100]}'
+  series_label: 'Nhà Trọ'
+  categories: 'May, June, July'
+  grouping: 0
+  field_colors: null
+  title: 'Test chart'
+  title_position: ''
+  data_labels: 'TRUE'
+  data_markers: 'FALSE'
+  legend: null
+  legend_position: bottom
+  background: ''
+  three_dimensional: 0
+  polar: 0
+  tooltips: 'TRUE'
+  tooltips_use_html: null
+  width: ''
+  height: ''
+  width_units: ''
+  height_units: ''
+  xaxis_title: Custom
+  xaxis_labels_rotation: null
+  yaxis_title: 'Lan Dat'
+  yaxis_min: null
+  yaxis_max: null
+  yaxis_prefix: null
+  yaxis_suffix: null
+  yaxis_decimal_count: null
+  yaxis_labels_rotation: null
+  inherit_yaxis: 0
+  secondary_yaxis_title: 'Lan Dat'
+  secondary_yaxis_min: ''
+  secondary_yaxis_max: ''
+  secondary_yaxis_prefix: null
+  secondary_yaxis_suffix: null
+  secondary_yaxis_decimal_count: null
+  secondary_yaxis_labels_rotation: null
+  green_from: null
+  green_to: null
+  red_from: null
+  red_to: null
+  yellow_from: null
+  yellow_to: null
+  max: null
+  min: null
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/1
+    negate: false
+    context_mapping: {  }

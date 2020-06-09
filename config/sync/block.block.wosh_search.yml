@@ -1,0 +1,23 @@
+uuid: 9fb6888a-a092-4de1-9caf-e93d935e3b18
+langcode: vi
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - wosh
+_core:
+  default_config_hash: 5qFps3xbK-EVu-vKVjU3-iEwZhjgwqFb1DMoHmCk7oI
+id: wosh_search
+theme: wosh
+region: search
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+  page_id: ''
+visibility: {  }

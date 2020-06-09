@@ -1,0 +1,24 @@
+uuid: a951bd5b-7dee-47fc-b673-9483ff986a1c
+langcode: vi
+status: true
+dependencies:
+  config:
+    - node.type.booking
+_core:
+  default_config_hash: wjZYp7SjawPV6GX5KR2jlHxAZkXcN_W21oOiL6vymis
+id: node.booking.promote
+field_name: promote
+entity_type: node
+bundle: booking
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

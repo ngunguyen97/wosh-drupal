@@ -1,0 +1,8 @@
+uuid: 053c23aa-743d-43e6-9dd7-ebe8d2a29bb3
+langcode: vi
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: U5VlGjd_SfV0Qm_EfnaynOfc549cNscFAx48JfYoMRI
+id: default
+label: Default

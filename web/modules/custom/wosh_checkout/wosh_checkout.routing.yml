@@ -1,0 +1,7 @@
+wosh_checkout.example:
+  path: '/checkout'
+  defaults:
+    _title: 'Thanh Toán'
+    _controller: '\Drupal\wosh_checkout\Controller\WoshCheckoutController::build'
+  requirements:
+    _permission: 'access content'

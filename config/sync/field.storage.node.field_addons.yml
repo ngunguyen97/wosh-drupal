@@ -1,0 +1,21 @@
+uuid: 1e62e9c0-b6a2-4da3-9e2e-1b51185529d1
+langcode: vi
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: rT53mSAJ6FqZ_NdT58DLOUCrOb2jkieS-SxK6roZ3MI
+id: node.field_addons
+field_name: field_addons
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

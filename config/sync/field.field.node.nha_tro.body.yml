@@ -1,0 +1,23 @@
+uuid: 5278c3fa-ac53-45eb-8e75-a700f227f440
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.nha_tro
+  module:
+    - text
+id: node.nha_tro.body
+field_name: body
+entity_type: node
+bundle: nha_tro
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,26 @@
+uuid: 36ab19aa-da3a-449e-a9d8-d1715b29c67b
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_checkin_date
+    - node.type.booking
+  enforced:
+    module:
+      - booking
+  module:
+    - datetime
+_core:
+  default_config_hash: dC1Zb-vCoqXGwxGoLJaP4_fCUaZ1R8V-mcHxPfZgY5A
+id: node.booking.field_checkin_date
+field_name: field_checkin_date
+entity_type: node
+bundle: booking
+label: 'Check-in date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

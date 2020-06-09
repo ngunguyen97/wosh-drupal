@@ -1,0 +1,26 @@
+uuid: 1bc5b8f1-1990-4cb7-8cc6-571914700856
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_checkout_date
+    - node.type.booking
+  enforced:
+    module:
+      - booking
+  module:
+    - datetime
+_core:
+  default_config_hash: 7sXEr6LJ2KAVLrg9wWwD6o93UtNvhApCET1nz1RPqww
+id: node.booking.field_checkout_date
+field_name: field_checkout_date
+entity_type: node
+bundle: booking
+label: 'Check-out date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

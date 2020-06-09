@@ -1,0 +1,31 @@
+uuid: 00cf76b8-2c72-47a0-a58c-c15ecd09abe0
+langcode: vi
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:488f8149-8c77-4b2f-9e02-9f3c8fffd44a'
+  module:
+    - block_content
+    - system
+  theme:
+    - wosh
+id: blockbanner
+theme: wosh
+region: slider
+weight: 0
+provider: null
+plugin: 'block_content:488f8149-8c77-4b2f-9e02-9f3c8fffd44a'
+settings:
+  id: 'block_content:488f8149-8c77-4b2f-9e02-9f3c8fffd44a'
+  label: 'Block Banner'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/1
+    negate: false
+    context_mapping: {  }

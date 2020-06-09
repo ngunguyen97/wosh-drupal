@@ -1,0 +1,10 @@
+uuid: 467380cd-6ee7-4ffa-a604-f69e0d1e3f27
+langcode: vi
+status: true
+dependencies:
+  module:
+    - block
+id: block.token
+label: Token
+targetEntityType: block
+cache: true

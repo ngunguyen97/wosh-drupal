@@ -1,0 +1,20 @@
+uuid: d6987f46-0a46-4baa-bd47-f74731627a73
+langcode: vi
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: sWwBG1gdXdmqLcAErLg55TwSgp1s6tToiaSgb_PTsN0
+id: node.field_reminder_sent_deposit
+field_name: field_reminder_sent_deposit
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: a8db8947-a801-4cd5-9164-0d6d8d38df92
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nha_tro_dien_tich
+    - node.type.nha_tro
+id: node.nha_tro.field_nha_tro_dien_tich
+field_name: field_nha_tro_dien_tich
+entity_type: node
+bundle: nha_tro
+label: 'Diện Tích'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

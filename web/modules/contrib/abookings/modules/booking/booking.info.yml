@@ -1,0 +1,19 @@
+name:         Booking
+type:         module
+description:  Fieldable booking entity with start and end dates, status, and guest fields.
+# core:         8.x
+package:      Bookings
+dependencies:
+  - abookings
+  - views
+  - datetime
+  - options
+  - text
+  - user
+  - node
+
+# Information added by Drupal.org packaging script on 2018-08-12
+version: '8.x-1.0-beta2'
+core: '8.x'
+project: 'abookings'
+datestamp: 1534074190

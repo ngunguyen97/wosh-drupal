@@ -1,0 +1,21 @@
+uuid: 26549965-7926-47a2-9aec-6c0b56854cf2
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phone_number
+    - node.type.booking
+_core:
+  default_config_hash: J0MV4xh6CudVM22tn8McqlI9hn3cRjXLc31kHvz00eU
+id: node.booking.field_phone_number
+field_name: field_phone_number
+entity_type: node
+bundle: booking
+label: 'Số điện thoại'
+description: 'Start with your country dialing code; eg. "+27" for South Africa.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

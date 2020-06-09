@@ -1,0 +1,22 @@
+uuid: 1926fd4e-8f0d-4bf7-827d-844af2415a35
+langcode: vi
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: yrwn_oTNXV9QmggcJ9mxlcmzl6XoNs4R4lGf97OkOYs
+id: node.field_seasonal_price
+field_name: field_seasonal_price
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

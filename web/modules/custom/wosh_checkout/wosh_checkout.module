@@ -1,0 +1,205 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for wosh_checkout module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element\PasswordConfirm;
+use Drupal\Core\Url;
+use Drupal\node\Entity\Node;
+use Drupal\webform\Entity\WebformSubmission;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
+/**
+ * Implements hook_theme().
+ */
+function wosh_checkout_theme($existing, $type, $theme, $path) {
+  return [
+    'wosh_checkout' => [
+      'variables' => [
+        'test_var' => 'test',
+        'label' => NULL,
+        'thumbnail' => NULL,
+        'location' => NULL,
+        'nid' => NULL,
+        'total_price' => NULL
+      ],
+    ],
+  ];
+}
+
+/**
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ */
+function wosh_checkout_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if($form_id == 'webform_submission_dashboard_boarding_house_add_form') {
+    $nid = \Drupal::request()->query->get('nid');
+    if(!empty($nid)) {
+      $node = Node::load($nid);
+      if(!empty($node) && $node->bundle() == 'nha_tro') {
+        $form['elements']['nha_tro']['#default_value'] = $node;
+        $form['elements']['gia']['#default_value'] = number_format($node->get('field_nha_tro_num_gia')->value,'0',',',',');
+      }
+    }
+    foreach (array_keys($form['actions']) as $action) {
+      if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
+        $form['actions'][$action]['#submit'] = ['wosh_checkout_boarding_house_form_submit'];
+      }
+    }
+    #$form_state->setSubmitHandlers(['wosh_checkout_boarding_house_form_submit']);
+
+    #$form['actions']['submit'] = ['wosh_checkout_boarding_house_form_submit'];
+    #$form['#submit'] = 'wosh_checkout_boarding_house_form_submit';
+    #$form['actions']['submit']['#validate'][] = '';
+  }
+}
+
+function wosh_checkout_boarding_house_form_submit(array $form, FormStateInterface $form_state) {
+      $full_name = $form_state->getValue('full_name');
+      $phone_number = $form_state->getValue('phone_number');
+      $email  = $form_state->getValue('email');
+      $check_in = $form_state->getValue('check_in');
+      $house_id = $form_state->getValue('nha_tro');
+      $price = $form_state->getValue('gia');
+      $res = __existsBoardingHouse($email, $check_in, $house_id);
+      if($res['status']) {
+        drupal_set_message(t('Hiện tại, căn hộ này bạn đã đặt, chủ căn hộ sẽ liên lạc với bạn'), 'error');
+        return false;
+      }else {
+        /** @var \Drupal\webform\Entity\WebformSubmission $isNew */
+
+        $ip_address = Drupal::request()->getClientIp();
+        $isNew = WebformSubmission::create([
+          'webform_id' => 'dashboard_boarding_house',
+          'remote_addr' => $ip_address,
+          'data' => [
+            'full_name' => $full_name,
+            'phone_number' => $phone_number,
+            'email' => $email,
+            'nha_tro' => $house_id,
+            'check_in' => $check_in,
+            'gia' => $price
+          ]
+        ]);
+        $isNew->save();
+        \Drupal::logger('wosh_checkout')->info('has created boarding_house');
+        return $form_state->setRedirect('entity.node.canonical', ['node' => "8"]);
+      }
+
+
+}
+
+
+function __existsBoardingHouse($email, $check_in, $house) {
+  $result = Drupal::entityQuery('webform_submission')
+    ->condition('webform_id', 'dashboard_boarding_house')
+    ->execute();
+  $storage = \Drupal::entityTypeManager()->getStorage('webform_submission');
+  $submissions = $storage->loadMultiple($result);
+  if(!empty($submissions)) {
+    foreach ($submissions as $submission) {
+      if($submission->getData()['email'] === $email && $submission->getData()['check_in'] === $check_in && $submission->getData()['nha_tro'] === $house) {
+        return ['status' => TRUE];
+      }
+    }
+  }
+  return ['status' => FALSE];
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function wosh_checkout_form_user_register_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if($form_id == 'user_register_form') {
+    $form['#cache'] = ['max-age' => 0];
+    \Drupal::service('page_cache_kill_switch')->trigger();
+  }
+  $form['account']['name']['#required'] = FALSE;
+  unset($form['account']['mail']['#description']);
+  unset($form['account']['name']['#description']);
+  unset($form['timezone']);
+  unset($form['contact']);
+  $form['account']['pass']['#process'][] = '_user_register_form_process_pass';
+  if($form_id == 'user_register_form') {
+    $form['#cache'] = ['max-age' => 0];
+    \Drupal::service('page_cache_kill_switch')->trigger();
+  }
+  $form['#validate'][] = 'userRegisterFormValidate';
+}
+
+function userRegisterFormValidate(array $form, FormStateInterface &$form_state) {
+  $register_mail = $form_state->getValue('mail');
+  if (filter_var($register_mail, FILTER_VALIDATE_EMAIL)) {
+    $user = user_load_by_mail($register_mail);
+    if ($user) {
+      $form_state->setValue('name', $user->getAccountName());
+      $form_state->setErrorByName('mail', t('An account has already been registered with the email address @mail If you believe this to be an error, please contact us at storyteller@ourbetterworld.org.', ['@mail' => $register_mail]));
+    }
+    else {
+      $name = strstr($register_mail, '@', TRUE);
+      // TODO: check rule to create user login name,
+      // currently get the first part of email address,
+      // with random num 100-999.
+      $new_name = $name;
+      $user = user_load_by_name($new_name);
+      while ($user) {
+        $rand_num = mt_rand(100, 999);
+        $new_name = $name . '_' . $rand_num;
+        $user = user_load_by_name($new_name);
+      }
+      $form_state->setValue('name', $new_name);
+    }
+  }
+  else {
+    $form_state->setErrorByName('mail', t('@mail is error format.', ['@mail' => $register_mail]));
+  }
+
+  if ($form_state->hasAnyErrors()) {
+    $errors = $form_state->getErrors();
+    $form_state->clearErrors();
+
+    foreach ($errors as $key => $value) {
+      // dump($errors);die('--------------');
+      if ($key == 'name') {
+        $name = strstr($register_mail, '@', TRUE);
+        // TODO: check rule to create user login name
+        // currently get the first part of email address
+        // with random num 100-999.
+        $new_name = $name;
+        $user = user_load_by_name($new_name);
+        while ($user) {
+          $rand_num = mt_rand(100, 999);
+          $new_name = $name . '_' . $rand_num;
+          $user = user_load_by_name($new_name);
+        }
+        $form_state->setValue('name', $new_name);
+      }
+      else {
+        $form_state->setErrorByName($key, t('<div class="ui basic red pointing prompt label transition visible">' . $value . '</div>'));
+      }
+    }
+  }
+}
+
+function _user_register_form_process_pass(&$element, FormStateInterface $form_state, &$complete_form) {
+  $form['#cache'] = ['max-age' => 0];
+  \Drupal::service('page_cache_kill_switch')->trigger();
+  $element = PasswordConfirm::processPasswordConfirm($element, $form_state, $complete_form);
+  $element['pass1']['#placeholder'] = t('Mật khẩu*');
+  $element['pass2']['#placeholder'] = t('Xác nhận mật khẩu*');
+  $element['pass1']['#title'] = t('Mật khẩu*');
+  $element['pass2']['#title'] = t('Xác nhận mật khẩu*');
+  // $element['#element_validate'][] =
+  // ['\Drupal\obw_contributor_profile\Form\ChangePasswordForm',
+  // 'validatePasswordStrength'];.
+  return $element;
+}
+

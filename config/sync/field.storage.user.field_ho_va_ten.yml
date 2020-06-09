@@ -1,0 +1,21 @@
+uuid: a55c690f-47f9-4c06-bd10-b2afaae4b2ba
+langcode: vi
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_ho_va_ten
+field_name: field_ho_va_ten
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

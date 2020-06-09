@@ -1,0 +1,41 @@
+uuid: 7ee9d6d4-6017-4ecd-98b9-f5d3c796a547
+langcode: vi
+status: true
+dependencies:
+  enforced:
+    module:
+      - booking
+  module:
+    - node
+    - options
+_core:
+  default_config_hash: rMne1USffZbRJ-HZrBof0no1tlPaWKJJcgels8frP18
+id: node.field_booking_status
+field_name: field_booking_status
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: provisional
+      label: Provisional
+    -
+      value: expired
+      label: 'Hết hạn'
+    -
+      value: confirmed
+      label: Confirmed
+    -
+      value: cancelled
+      label: 'Bị thôi'
+    -
+      value: completed
+      label: Completed
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

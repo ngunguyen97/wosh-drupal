@@ -1,0 +1,12 @@
+uuid: c61e79e3-1e85-4679-aa74-da812341bd78
+langcode: vi
+status: false
+dependencies:
+  module:
+    - comment
+_core:
+  default_config_hash: K7eNlfU7NEUajz01wItywZklr2oaPgL6s1_97fmDXLA
+id: comment.full
+label: 'Bình luận đầy đủ'
+targetEntityType: comment
+cache: true

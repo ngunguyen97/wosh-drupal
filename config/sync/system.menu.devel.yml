@@ -1,0 +1,13 @@
+uuid: 15e6a2df-60b7-4aa7-a940-bf52321a8f62
+langcode: vi
+status: true
+dependencies:
+  enforced:
+    module:
+      - devel
+_core:
+  default_config_hash: 3V-l1uuTcyirYOGLPZV5HWaDfr02uEbWZJIwc8Byz-c
+id: devel
+label: Development
+description: 'Links related to Devel module.'
+locked: true

@@ -1,0 +1,27 @@
+uuid: 660a9234-b51f-4bde-8852-5c9f001d1c9f
+langcode: vi
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - wosh
+_core:
+  default_config_hash: 1bgxk9oXpjh0YistnxG_Q0yfeBA6pQuuOxch100rum4
+id: wosh_main_menu
+theme: wosh
+region: primary_menu
+weight: 10
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 3
+  expand_all_items: false
+visibility: {  }

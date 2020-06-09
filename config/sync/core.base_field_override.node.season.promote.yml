@@ -1,0 +1,24 @@
+uuid: f6d69340-659f-4016-8a36-94ae4bf53601
+langcode: vi
+status: true
+dependencies:
+  config:
+    - node.type.season
+_core:
+  default_config_hash: PdCXwL69rxeGEcAf1lEatPsJa72Oc_JO1ON5QswQIIU
+id: node.season.promote
+field_name: promote
+entity_type: node
+bundle: season
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

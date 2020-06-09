@@ -1,0 +1,20 @@
+uuid: 0d1d5126-b02b-480d-8284-69d363a75a92
+langcode: vi
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_nha_tro_num_gia
+field_name: field_nha_tro_num_gia
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

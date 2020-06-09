@@ -1,0 +1,17 @@
+name:         Season
+type:         module
+description:  Season content type that applies a price over a range of dates.
+# core:         8.x
+package:      Bookings
+dependencies:
+  - abookings
+  - booking
+  - bookable_unit
+  - rest
+  - serialization
+
+# Information added by Drupal.org packaging script on 2018-08-12
+version: '8.x-1.0-beta2'
+core: '8.x'
+project: 'abookings'
+datestamp: 1534074190

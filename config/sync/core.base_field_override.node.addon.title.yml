@@ -1,0 +1,20 @@
+uuid: f891deca-568c-4949-97d1-5f63550793c6
+langcode: vi
+status: true
+dependencies:
+  config:
+    - node.type.addon
+_core:
+  default_config_hash: NizVt7rOrv6kN8N3BPXQBb8NSNsriKv94DfVzNSFpq8
+id: node.addon.title
+field_name: title
+entity_type: node
+bundle: addon
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

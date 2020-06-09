@@ -1,0 +1,15 @@
+uuid: f2c1973d-1189-445d-a411-fb9976045152
+name: Wosh
+mail: ngu.nguyen@kyanon.digital
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/1
+admin_compact_mode: false
+weight_select_max: 100
+langcode: vi
+default_langcode: vi
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
+mail_notification: ''

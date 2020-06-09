@@ -1,0 +1,21 @@
+uuid: 2860c28b-46df-4d81-8f95-815b2a85f946
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_first_name
+    - node.type.booking
+_core:
+  default_config_hash: G2fwabejuTwuqiSd7pHclGZaqAAxK_zZXZu4uLvDEmY
+id: node.booking.field_first_name
+field_name: field_first_name
+entity_type: node
+bundle: booking
+label: Tên
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

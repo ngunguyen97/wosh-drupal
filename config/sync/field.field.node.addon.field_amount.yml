@@ -1,0 +1,25 @@
+uuid: e616c988-829f-4ad7-b3c2-4c0b7f155772
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_amount
+    - node.type.addon
+_core:
+  default_config_hash: pWw3GveRZyeBRNBGEvyTZf80yQuoe4JvpINQB39z95U
+id: node.addon.field_amount
+field_name: field_amount
+entity_type: node
+bundle: addon
+label: 'Số lượng'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

@@ -1,0 +1,11 @@
+uuid: cace931b-1fbc-43e7-a902-2d4e19ac3b78
+langcode: vi
+status: true
+dependencies:
+  config:
+    - node.type.map
+id: node.map
+target_entity_type_id: node
+target_bundle: map
+default_langcode: site_default
+language_alterable: false

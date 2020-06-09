@@ -1,0 +1,11 @@
+uuid: 36e6c80d-214e-41ac-83c3-95e86d61330a
+langcode: vi
+status: true
+dependencies:
+  config:
+    - node.type.nha_tro
+id: node.nha_tro
+target_entity_type_id: node
+target_bundle: nha_tro
+default_langcode: site_default
+language_alterable: false

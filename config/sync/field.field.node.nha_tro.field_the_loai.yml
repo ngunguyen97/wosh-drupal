@@ -1,0 +1,29 @@
+uuid: 11594b7f-39b0-4297-830a-5aba581c1509
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_the_loai
+    - node.type.nha_tro
+    - taxonomy.vocabulary.categories
+id: node.nha_tro.field_the_loai
+field_name: field_the_loai
+entity_type: node
+bundle: nha_tro
+label: 'Thể Loại'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      categories: categories
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

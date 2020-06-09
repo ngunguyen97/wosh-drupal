@@ -1,0 +1,22 @@
+uuid: e512d241-da15-4766-82cc-30d5fdb418b7
+langcode: vi
+status: true
+dependencies:
+  theme:
+    - wosh
+_core:
+  default_config_hash: pE-92y58ta4O3-IV-yDeZJ9HBzgAeZEdovQiICwR4NI
+id: wosh_local_tasks
+theme: wosh
+region: content
+weight: -20
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

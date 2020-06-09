@@ -1,0 +1,22 @@
+uuid: 796afc1f-647f-4a89-88da-e6d6566a3036
+langcode: vi
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - wosh
+_core:
+  default_config_hash: vQ0Olz3m8gxFFtyy7BIeJOn28--MCqSmS9706TONmXQ
+id: wosh_breadcrumbs
+theme: wosh
+region: breadcrumb
+weight: -100
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

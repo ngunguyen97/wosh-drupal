@@ -1,0 +1,20 @@
+uuid: 25a010bf-66fc-4b13-935b-3d901f43fe9e
+langcode: vi
+status: true
+dependencies:
+  module:
+    - geofield
+    - node
+id: node.field_nha_tro_vi_tri
+field_name: field_nha_tro_vi_tri
+entity_type: node
+type: geofield
+settings:
+  backend: geofield_backend_default
+module: geofield
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

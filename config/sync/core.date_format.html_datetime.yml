@@ -1,0 +1,10 @@
+uuid: d83fbdca-97a1-46b9-a3de-7a84b09783ca
+langcode: vi
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: jxfClwZIRXIdcvMrE--WkcZxDGUVoOIE3Sm2NRZlFuE
+id: html_datetime
+label: 'HTML Datetime'
+locked: true
+pattern: 'Y-m-d\TH:i:sO'

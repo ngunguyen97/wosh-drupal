@@ -1,0 +1,20 @@
+provis_booking_guest_body:        'Body text...'
+provis_booking_guest_subject:     '{villa_name} Provisional booking placed - Ref: {book_ref}'
+
+deposit_reminder_guest_body:      'Body text...'
+deposit_reminder_guest_subject:   '{villa_name} Reminder about deposit - Ref: {book_ref}'
+
+cancelled_booking_guest_body:     'Body text...'
+cancelled_booking_guest_subject:  '{villa_name} Booking cancelled - Ref: {book_ref}'
+
+confirmed_booking_guest_body:     'Body text...'
+confirmed_booking_guest_subject:  '{villa_name} Booking confirmed - Ref: {book_ref}'
+
+booking_feedback_guest_body:      'Body text...'
+booking_feedback_guest_subject:   '{villa_name} Feedback about booking - Ref: {book_ref}'
+
+expired_booking_guest_body:       'Body text...'
+expired_booking_guest_subject:    '{villa_name} Booking expired - Ref: {book_ref}'
+
+prearrival_guest_body:            'Body text...'
+prearrival_guest_subject:         '{villa_name} Pre-arrival info - Ref: {book_ref}'

@@ -1,0 +1,4 @@
+administer wosh_checkout configuration:
+  title: 'Administer wosh_checkout configuration'
+  description: 'Optional description.'
+  restrict access: true

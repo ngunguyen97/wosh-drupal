@@ -1,0 +1,33 @@
+uuid: 46f541ed-64a3-4bd6-8383-3e3cf3d709b2
+langcode: vi
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.slick.body
+    - field.field.node.slick.field_slick_image
+    - node.type.slick
+  module:
+    - text
+    - user
+id: node.slick.teaser
+targetEntityType: node
+bundle: slick
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_slick_image: true
+  langcode: true

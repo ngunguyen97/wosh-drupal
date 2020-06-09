@@ -1,0 +1,11 @@
+uuid: 85ee0f0c-66cd-4f50-8ea9-6ab7d2690a99
+langcode: vi
+status: true
+dependencies:
+  config:
+    - node.type.slick
+id: node.slick
+target_entity_type_id: node
+target_bundle: slick
+default_langcode: site_default
+language_alterable: false

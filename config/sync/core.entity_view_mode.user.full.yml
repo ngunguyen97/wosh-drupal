@@ -1,0 +1,12 @@
+uuid: d0af881e-5477-4b4c-aa90-7df6c31cdf4b
+langcode: vi
+status: false
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: mQIF_foYjmnVSr9MpcD4CTaJE_FpO1AyDd_DskztGhM
+id: user.full
+label: 'Tài khoản người dùng'
+targetEntityType: user
+cache: true

@@ -1,0 +1,216 @@
+uuid: 29c11e49-a28e-4473-b1e6-dbfc1d3a2864
+langcode: vi
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: dashboard_boarding_house
+title: 'Dashboard Boarding House'
+description: ''
+category: ''
+elements: "full_name:\n  '#type': textfield\n  '#title': 'Tên khách hàng'\n  '#placeholder': 'Họ và tên'\n  '#required': true\n  '#required_error': 'Vui lòng nhập họ và tên'\n  '#label_attributes':\n    class:\n      - bold\ngroup_1:\n  '#type': container\n  '#attributes':\n    class:\n      - 'group-1 is-flex middle-xs between-xs'\n  phone_number:\n    '#type': tel\n    '#title': 'Số diện thoại'\n    '#placeholder': 'Số điện thoại'\n    '#required': true\n    '#required_error': 'Vui lòng nhập số điện thoại'\n    '#pattern': '^[0-9]{3}[0-9]{3}[0-9]{4}$|^[0-9]{3} [0-9]{3} [0-9]{4}$'\n    '#pattern_error': 'Vui lòng nhập đúng số điện thoại'\n    '#label_attributes':\n      class:\n        - bold\n  email:\n    '#type': email\n    '#title': Email\n    '#placeholder': email@example.com\n    '#required': true\n    '#required_error': 'Vui lòng nhập email'\n    '#pattern': \\S+@\\S+\\.\\S+\n    '#pattern_error': 'Vui lòng nhập đúng email'\n    '#label_attributes':\n      class:\n        - bold\nnha_tro:\n  '#type': entity_autocomplete\n  '#title': 'Nhà Trọ'\n  '#title_display': invisible\n  '#attributes':\n    class:\n      - visually-hidden\n  '#target_type': node\n  '#selection_handler': 'default:node'\n  '#selection_settings':\n    target_bundles:\n      nha_tro: nha_tro\ncheck_in:\n  '#type': date\n  '#title': Check-in\n  '#prepopulate': true\n  '#default_value': Now\n  '#date_date_min': 01-01-2019\n  '#datepicker': true\n  '#date_date_format': d/m/Y\n  '#required': true\ntrang_thai:\n  '#type': select\n  '#title': 'Trạng Thái'\n  '#options':\n    dang_xac_nhan: 'Đang xác nhận'\n    da_xa_nhan: 'Đã xác nhận'\n    hoan_thanh: 'Hoàn thành'\n  '#select2': true\n  '#default_value': dang_xac_nhan\n  '#wrapper_attributes':\n    class:\n      - visually-hidden\ngia:\n  '#type': textfield\n  '#title': Giá\n  '#wrapper_attributes':\n    class:\n      - visually-hidden\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Đặt phòng'"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_admin_theme: false
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  xac_nhan_dat_phong:
+    id: email
+    label: 'Xác nhận đặt phòng'
+    handler_id: xac_nhan_dat_phong
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:email:raw]'
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      subject: 'Xác Nhận Đặt Phòng'
+      body: "<table bgcolor=\"\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td align=\"center\" bgcolor=\"\" style=\"vertical-align:top\">&nbsp;\r\n\t\t\t<table bgcolor=\"\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"container\" style=\"font-family: Helvetica, Arial, sans-serif; max-width: 642px; background-color: #fff; border: solid 1px #CCC;\">\r\n\t\t\t\t<tbody>\r\n\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t<td align=\"center\" class=\"container-padding content\" style=\"background-color:#ffffff; padding:0px\"><!-- One Row table -->\r\n\t\t\t\t\t\t<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"background-repeat: no-repeat; background-size: contain;\" width=\"100%\">\r\n\t\t\t\t\t\t\t<tbody>\r\n\t\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t\t<td align=\"center\" bgcolor=\"\" colspan=\"2\" style=\"vertical-align:middle\">\r\n\t\t\t\t\t\t\t\t\t<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\r\n\t\t\t\t\t\t\t\t\t\t<tbody>\r\n\t\t\t\t\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<td align=\"center\" bgcolor=\"\" colspan=\"2\" style=\"vertical-align:middle\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"body-text\"><a href=\" \" rel=\"noopener\" style=\"padding: 0; margin: 0; border: 0; outline: 0; display: block;\" target=\"_blank\"><img align=\"absbottom\" alt=\"\" border=\"0\" class=\"image\" hspace=\"0\" src=\"https://thinkbooker.com/documents/tb-24-thinkbookerblog-600x315-657.jpg\" style=\"max-width: 100%;\" title=\"\" vspace=\"0\" /> </a></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<td align=\"left\" bgcolor=\"\" colspan=\"2\" style=\"font-size:14px; padding:3% 9% 5%; vertical-align:middle\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"body-text\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p style=\"font-size: 28px;\">X&aacute;c nhận đơn h&agrave;ng!</p>\r\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"body-text\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p>Xin ch&agrave;o, <strong>[webform_submission:values:full_name]</strong></p>\r\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"body-text\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p><strong>Ch&acirc;n th&agrave;nh cảm ơn Qu&yacute; kh&aacute;ch đ&atilde; mua sắm tại Wosh !</strong></p>\r\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t\t\t\t\t\t\t\t<table style=\"border-collapse: collapse; font-family: arial, sans-serif; width: 100%; border: 1px solid #5c5c5c; height: 160px;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<tbody>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td colspan=\"2\" style=\"color:#e42555; font-size:17px; font-weight:bold; height:44px; padding-left:10px\">Th&ocirc;ng tin đơn h&agrave;ng</td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<tr class=\"height:35px\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td style=\"padding-left:10px\">Thời gian đặt h&agrave;ng</td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td><strong>[webform_submission:values:check_in]</strong></td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<tr class=\"height:35px\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td style=\"padding-left:10px\">Trạng th&aacute;i đơn h&agrave;ng</td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td><strong>Đang x&aacute;c nhận</strong></td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<tr class=\"height:35px\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td style=\"padding-left:10px\">Điện thoại</td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td><strong>[webform_submission:values:phone_number]</strong></td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</tbody>\r\n\t\t\t\t\t\t\t\t\t\t\t\t</table>\r\n\r\n\t\t\t\t\t\t\t\t\t\t\t\t<hr />\r\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 style=\"font-size: 17px; font-weight: bold; color: #e42555;\">Chi tiết sản phẩm</h3>\r\n\r\n\t\t\t\t\t\t\t\t\t\t\t\t<table style=\"border-collapse: collapse; font-family: arial, sans-serif; width: 100%; min-height: 180px;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<tbody>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<tr style=\"background-color:#333c; color:#f4f4f4; font-size:13px; font-weight:normal\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<th style=\"border: 1px solid #dddddd; text-align: center; padding: 8px;\">H&igrave;nh ảnh</th>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<th style=\"border: 1px solid #dddddd; text-align: center; padding: 8px;\">T&ecirc;n sản phẩm</th>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<th style=\"border: 1px solid #dddddd; text-align: center; padding: 8px;\">Tổng tiền (VND)</th>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td style=\"border:1px solid #dddddd; padding:8px; text-align:left\">H&igrave;nh ảnh</td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td style=\"border:1px solid #dddddd; padding:8px; text-align:left\">[webform_submission:values:nha_tro:entity:title]</td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td style=\"border:1px solid #dddddd; padding:8px; text-align:left\">[webform_submission:values:gia] VND</td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td colspan=\"2\" style=\"border:1px solid #dddddd; padding:8px; text-align:left\">Tổng tiền thanh to&aacute;n</td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td style=\"border:1px solid #dddddd; padding:8px; text-align:left\">[webform_submission:values:gia] (VND)</td>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</tbody>\r\n\t\t\t\t\t\t\t\t\t\t\t\t</table>\r\n\r\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"body-text\" style=\"font-style: italic;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p>Bạn c&oacute; thể xem c&aacute;c sản phẩm của ch&uacute;ng t&ocirc;i <a href=\"[site:url]\">tại đ&acirc;y</a>. Xin đừng ngần ngại li&ecirc;n hệ với ch&uacute;ng t&ocirc;i qua đường d&acirc;y n&oacute;ng của ch&uacute;ng t&ocirc;i (0) 365 44 69 95 hoặc email của ch&uacute;ng t&ocirc;i info@wosh.com.vn!</p>\r\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t\t</tbody>\r\n\t\t\t\t\t\t\t\t\t</table>\r\n\t\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t</tbody>\r\n\t\t\t\t\t\t</table>\r\n\t\t\t\t\t\t<!-- End one row --></td>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t\t<tr><!-- Footer -->\r\n\t\t\t\t\t\t<td align=\"center\" bgcolor=\"#000000\" class=\"container-padding footer-text\" style=\"color:#c4c4c4; font-family:Helvetica,Arial,sans-serif; font-size:14px; padding:5%; width:100%\"><!-- End padding table -->\r\n\t\t\t\t\t\t<table align=\"center\" bgcolor=\"\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"force-row\" width=\"100%\">\r\n\t\t\t\t\t\t\t<tbody>\r\n\t\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t\t<td align=\"center\" class=\"col\" colspan=\"2\" style=\"color:#c4c4c4; font-family:Helvetica,Arial,sans-serif; text-align:center; width:50%\">\r\n\t\t\t\t\t\t\t\t\t<table align=\"center\" bgcolor=\"\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"force-row\" width=\"100%\">\r\n\t\t\t\t\t\t\t\t\t\t<tbody>\r\n\t\t\t\t\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<td align=\"left\" bgcolor=\"\" colspan=\"2\" style=\"vertical-align:middle; width:20%\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"body-text\" style=\"width: 100%;\"><a href=\"https://edigi.com.vn/\" rel=\"noopener\" style=\"padding: 0; margin: 0; border: 0; outline: 0; display: block;\" target=\"_blank\"><strong>Wosh</strong></a></div>\r\n\r\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"body-text\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<p style=\"color: #c4c4c4; font-family: Helvetica,Arial,sans-serif;\">No. 2 Cong Xa Paris, District 1, Ho Chi Minh City<br />\r\n\t\t\t\t\t\t\t\t\t\t\t\tHotline: +84 36 544 6995<br />\r\n\t\t\t\t\t\t\t\t\t\t\t\tEmail: info@wosh.com.vn</p>\r\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t\t</tbody>\r\n\t\t\t\t\t\t\t\t\t</table>\r\n\t\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t\t<td align=\"center\" class=\"col\" colspan=\"2\" style=\"color:#c4c4c4; font-family:Helvetica,Arial,sans-serif; text-align:center; width:50%\">\r\n\t\t\t\t\t\t\t\t\t<table align=\"center\" bgcolor=\"\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"force-row\" width=\"100%\">\r\n\t\t\t\t\t\t\t\t\t\t<tbody>\r\n\t\t\t\t\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<td bgcolor=\"\" colspan=\"2\" style=\"text-align:right\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<div style=\"display: inline-block; width: 95%; margin-top: -11%;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"body-text\" style=\"width: 25%; float: left; text-align: right;\"><a href=\"https://www.facebook.com\" rel=\"noopener\" style=\"padding: 0; margin: 0; border: 0; outline: 0; display: block;\" target=\"_blank\"><img align=\"absbottom\" alt=\"\" border=\"0\" class=\"image\" hspace=\"0\" src=\"https://www.shareicon.net/data/32x32/2017/03/02/880208_network_512x512.png\" style=\"max-width: 100%;\" title=\"\" vspace=\"0\" /> </a></div>\r\n\r\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"body-text\" style=\"width: 25%; float: left; text-align: right;\"><a href=\"https://www.instagram.com\" rel=\"noopener\" style=\"padding: 0; margin: 0; border: 0; outline: 0; display: block;\" target=\"_blank\"><img align=\"absbottom\" alt=\"\" border=\"0\" class=\"image\" hspace=\"0\" src=\"https://www.shareicon.net/data/32x32/2016/09/02/824265_color_512x512.png\r\n  \" style=\"max-width: 100%;\" title=\"\" vspace=\"0\" /> </a></div>\r\n\r\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"body-text\" style=\"width: 25%; float: left; text-align: right;\"><a href=\"https://www.youtube.com/\" rel=\"noopener\" style=\"padding: 0; margin: 0; border: 0; outline: 0; display: block;\" target=\"_blank\"><img align=\"absbottom\" alt=\"\" border=\"0\" class=\"image\" hspace=\"0\" src=\"https://www.shareicon.net/data/128x128/2016/06/13/591005_youtube_24x24.png\" style=\"max-width: 100%;\" title=\"\" vspace=\"0\" /> </a></div>\r\n\r\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"body-text\" style=\"width: 25%; float: left; text-align: right;\"><a href=\"https://www.linkedin.com/\" rel=\"noopener\" style=\"padding: 0; margin: 0; border: 0; outline: 0; display: block;\" target=\"_blank\"><img align=\"absbottom\" alt=\"Nếu hình ảnh này không hiển thị vui lòng click vào đây\" border=\"0\" class=\"image\" hspace=\"0\" src=\"https://www.shareicon.net/data/128x128/2016/06/13/591006_linkedin_24x24.png\" style=\"max-width: 100%;\" title=\"\" vspace=\"0\" /> </a></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t\t</tbody>\r\n\t\t\t\t\t\t\t\t\t</table>\r\n\t\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t</tbody>\r\n\t\t\t\t\t\t</table>\r\n\r\n\t\t\t\t\t\t<div class=\"body-text\" style=\"font-family: Helvetica, Arial, sans-serif; text-align: left; padding-top: 18px; margin-top: 9px; color: #c4c4c4; border-top: 1px solid #707070;\">&copy; 2019 Wosh. All rights reserved.</div>\r\n\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t<!-- end footer -->\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t</tbody>\r\n\t\t\t</table>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      theme_name: ''
+      parameters: {  }
+variants: {  }

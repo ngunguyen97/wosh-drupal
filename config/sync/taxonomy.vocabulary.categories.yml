@@ -1,0 +1,8 @@
+uuid: 27fdcfcc-85a6-4137-9372-9503d43f6a85
+langcode: vi
+status: true
+dependencies: {  }
+name: Categories
+vid: categories
+description: Categories
+weight: 0

@@ -1,0 +1,19 @@
+name:         Bookings back-end
+type:         module
+description:  Drupal functions that manage placing, verifying, altering, and deleting of bookings.
+# core:         8.x
+package:      Bookings
+dependencies:
+  - abookings
+  - bookable_unit
+  - booking
+  - season
+  - views
+  - rest
+  - serialization
+
+# Information added by Drupal.org packaging script on 2018-08-12
+version: '8.x-1.0-beta2'
+core: '8.x'
+project: 'abookings'
+datestamp: 1534074190

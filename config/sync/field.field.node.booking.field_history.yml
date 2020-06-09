@@ -1,0 +1,21 @@
+uuid: a23d2218-6fea-41d4-8bbb-f7dd2951c3e1
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_history
+    - node.type.booking
+_core:
+  default_config_hash: ojEzMbvPyN_CG5CGut24WUfuAYc4YucJKXArYGssQJU
+id: node.booking.field_history
+field_name: field_history
+entity_type: node
+bundle: booking
+label: History
+description: 'A simple data field to store a log of all events (like emails sent) regarding this booking.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

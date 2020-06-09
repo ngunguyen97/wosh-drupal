@@ -1,0 +1,76 @@
+uuid: fde502e9-20c9-438a-be8d-7a9df638d74e
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.field.node.season.field_bookable_units
+    - field.field.node.season.field_end_date
+    - field.field.node.season.field_seasonal_price
+    - field.field.node.season.field_start_date
+    - node.type.season
+  module:
+    - datetime
+_core:
+  default_config_hash: q9_UV5H2zx7drkbiZCGLpxKzI2PR49bnj-YHC6NxbPY
+id: node.season.default
+targetEntityType: node
+bundle: season
+mode: default
+content:
+  field_bookable_units:
+    weight: 35
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_end_date:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_seasonal_price:
+    weight: 34
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_start_date:
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

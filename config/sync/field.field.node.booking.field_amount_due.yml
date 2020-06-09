@@ -1,0 +1,25 @@
+uuid: 867382dd-fa23-42c8-aa7e-507798976d5e
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_amount_due
+    - node.type.booking
+_core:
+  default_config_hash: Q7l3CTF9eTTkmTKo1wDpkiEL3BoVw4KkMLT9uXlp8FQ
+id: node.booking.field_amount_due
+field_name: field_amount_due
+entity_type: node
+bundle: booking
+label: 'Balance due'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

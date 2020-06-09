@@ -1,0 +1,17 @@
+uuid: 500150eb-8ebf-4125-8c2e-aa81c83e2a73
+langcode: vi
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 6DuYBG0oLuJt64X0ttPxTzvIkWk9Nz_WbW0UsNZynTk
+name: 480x320
+label: 480x320
+effects:
+  3c1cc7ed-ca1e-411c-85ba-4468b7529395:
+    uuid: 3c1cc7ed-ca1e-411c-85ba-4468b7529395
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 320
+      anchor: center-center

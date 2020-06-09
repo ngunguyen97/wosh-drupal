@@ -1,0 +1,23 @@
+name:         Accommodation Bookings
+type:         module
+description:  Booking system for guest-houses and other accommodation with rooms.
+# core:         8.x
+package:      Bookings
+dependencies:
+  - views
+  - path
+  - node
+  - field
+  - automated_cron
+  - datetime
+  - options
+  - text
+  - user
+  - rest
+  - serialization
+
+# Information added by Drupal.org packaging script on 2018-08-12
+version: '8.x-1.0-beta2'
+core: '8.x'
+project: 'abookings'
+datestamp: 1534074190

@@ -1,0 +1,94 @@
+uuid: 73f6e784-a638-48f2-adab-fb92a0ea7d05
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.field.node.map.body
+    - field.field.node.map.field_location
+    - node.type.map
+  module:
+    - leaflet
+    - text
+    - user
+id: node.map.default
+targetEntityType: node
+bundle: map
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_location:
+    weight: 102
+    label: above
+    settings:
+      multiple_map: '0'
+      popup_content: ''
+      leaflet_map: google-roadmap
+      height: '400'
+      height_unit: px
+      fullscreen_control: '1'
+      reset_map:
+        position: topright
+        control: 0
+      map_position:
+        zoom: '18'
+        minZoom: '1'
+        maxZoom: '18'
+        zoomFiner: '5'
+        force: 0
+      icon:
+        iconType: marker
+        iconUrl: ''
+        shadowUrl: ''
+        html: '<div></div>'
+        html_class: leaflet-map-divicon
+        circle_marker_options: '{"radius":100,"color":"red","fillColor":"#f03","fillOpacity":0.5}'
+        iconSize:
+          x: ''
+          'y': ''
+        iconAnchor:
+          x: ''
+          'y': ''
+        shadowSize:
+          x: ''
+          'y': ''
+        shadowAnchor:
+          x: ''
+          'y': ''
+        popupAnchor:
+          x: ''
+          'y': ''
+      leaflet_markercluster:
+        options: '{"spiderfyOnMaxZoom":true,"showCoverageOnHover":true,"removeOutsideVisibleBounds":false}'
+        control: 0
+      path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2"}'
+      popup: 0
+      hide_empty_map: 0
+      disable_wheel: 0
+      gesture_handling: 0
+      geocoder:
+        control: 0
+        settings:
+          position: topright
+          input_size: 25
+          providers: {  }
+          min_terms: 4
+          delay: 800
+          zoom: 16
+          popup: 0
+          options: ''
+    third_party_settings: {  }
+    type: leaflet_formatter_default
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

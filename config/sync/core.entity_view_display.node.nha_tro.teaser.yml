@@ -1,0 +1,60 @@
+uuid: b233dfc2-dcd1-470e-9ca3-c4aec0b30a4b
+langcode: vi
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.nha_tro.body
+    - field.field.node.nha_tro.field_nha_tro_dia_chi
+    - field.field.node.nha_tro.field_nha_tro_dien_tich
+    - field.field.node.nha_tro.field_nha_tro_galleries
+    - field.field.node.nha_tro.field_nha_tro_num_gia
+    - field.field.node.nha_tro.field_nha_tro_thumbnail
+    - field.field.node.nha_tro.field_nha_tro_trang_thai
+    - field.field.node.nha_tro.field_nha_tro_vi_tri
+    - field.field.node.nha_tro.field_the_loai
+    - image.style.363x164
+    - node.type.nha_tro
+  module:
+    - image
+    - user
+id: node.nha_tro.teaser
+targetEntityType: node
+bundle: nha_tro
+mode: teaser
+content:
+  field_nha_tro_dia_chi:
+    type: string
+    weight: 2
+    region: content
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_nha_tro_num_gia:
+    type: number_integer
+    weight: 1
+    region: content
+    label: visually_hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_nha_tro_thumbnail:
+    type: image
+    weight: 0
+    region: content
+    label: visually_hidden
+    settings:
+      image_style: 363x164
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_nha_tro_dien_tich: true
+  field_nha_tro_galleries: true
+  field_nha_tro_trang_thai: true
+  field_nha_tro_vi_tri: true
+  field_the_loai: true
+  langcode: true
+  links: true

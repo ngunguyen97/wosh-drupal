@@ -1,0 +1,22 @@
+uuid: c244758c-93fe-4b8e-8d43-c62ff7bc7e99
+langcode: vi
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 49OOMXsFEWWbvmETHd_yYUiMVGX-v_tSezw4BVcJfW4
+id: node.field_min_guests
+field_name: field_min_guests
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: d2c0f5c3-c088-4406-b8a3-cf43ec54f876
+langcode: vi
+status: true
+dependencies:
+  enforced:
+    module: {  }
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: 4NSJZYkMaNGQRuH75lHUCQ4Cptqm07dloFkYiulkVyQ
+name: Booking
+type: booking
+description: 'Fieldable booking entity with start and end dates, status, and guest fields.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

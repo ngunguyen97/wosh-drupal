@@ -1,0 +1,6 @@
+name: wosh_checkout
+type: module
+description: Checkout and payment
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9

@@ -1,0 +1,22 @@
+uuid: 61e8676c-0600-43cd-a85d-a3b382d22250
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nha_tro_vi_tri
+    - node.type.nha_tro
+  module:
+    - geofield
+id: node.nha_tro.field_nha_tro_vi_tri
+field_name: field_nha_tro_vi_tri
+entity_type: node
+bundle: nha_tro
+label: 'Vị trí'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  backend: geofield_backend_default
+field_type: geofield

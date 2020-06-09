@@ -1,0 +1,17 @@
+uuid: d0cd6369-732a-4b04-8e3a-3d81917ac0fe
+langcode: vi
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Ng6pRtBh3RJXD3L-y1K8b9K4xAcyWVI2Pa41JTGbsOE
+name: 1200x500
+label: 1200x500
+effects:
+  50df27cf-367d-45e7-8c74-91545fd389dc:
+    uuid: 50df27cf-367d-45e7-8c74-91545fd389dc
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 500
+      anchor: center-center

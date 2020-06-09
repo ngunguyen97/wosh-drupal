@@ -1,0 +1,10 @@
+uuid: b5e96322-4a74-4b21-b7bb-3f92d835db10
+langcode: vi
+status: true
+dependencies:
+  module:
+    - shortcut
+id: shortcut.token
+label: Token
+targetEntityType: shortcut
+cache: true

@@ -1,0 +1,23 @@
+uuid: 42b297ea-edd5-47c8-8750-4d50eba1e156
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_end_date
+    - node.type.season
+  module:
+    - datetime
+_core:
+  default_config_hash: 2jaJLGNpVc81UdhH98-34OQIklgkaq28In3fCmaBmmo
+id: node.season.field_end_date
+field_name: field_end_date
+entity_type: node
+bundle: season
+label: 'End date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

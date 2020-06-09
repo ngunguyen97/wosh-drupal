@@ -1,0 +1,23 @@
+uuid: 2c0e88fc-4bbd-4de7-ab16-80ddf3dd67a3
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nha_tro_num_gia
+    - node.type.nha_tro
+id: node.nha_tro.field_nha_tro_num_gia
+field_name: field_nha_tro_num_gia
+entity_type: node
+bundle: nha_tro
+label: Giá
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,33 @@
+{# [module]/templates/my-template.html.twig #}
+<div class="wosh-checkout-section">
+  <div class="row">
+    <div class="col-md-8">
+      <h3 class="title bold">{{ 'Thông tin của bạn'|trans }}</h3>
+      {{ drupal_entity('webform', 'dashboard_boarding_house') }}
+    </div>
+    <div class="col-md-4">
+      <div class="title"><h3>{{ 'Chi tiết đặt phòng'|trans }}</h3></div>
+      <div class="wosh-box-wrapper">
+        <div class="checkup__header">
+            <a href="/{{ nid }}" class="is-flex">
+              <div class="grow">
+              <h4 class="checkup__title">{{ label }}</h4>
+              <div class="checkup__add">
+                {{ location }}
+              </div>
+              </div>
+              <div>
+                <img src="{{ thumbnail }}" alt="">
+              </div>
+            </a>
+        </div>
+        <div class="checkup__body py-3">
+          <div class="is-flex middle-xs between-xs">
+            <div><span class="extra-bold">Tổng tiền</span></div>
+            <span class="extra-bold">{{ total_price|number_format(0,',','.') }}đ</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

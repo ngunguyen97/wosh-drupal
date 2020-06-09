@@ -1,0 +1,31 @@
+uuid: 4c03efc4-83c6-4447-ad7f-f74eff9083f7
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_addons
+    - node.type.addon
+    - node.type.bookable_unit
+_core:
+  default_config_hash: 7rbvoWegoCZjygMOqXgaaIaxBgS9zQqdVDFnq6aXdEI
+id: node.bookable_unit.field_addons
+field_name: field_addons
+entity_type: node
+bundle: bookable_unit
+label: Addons
+description: 'The addons that can be purchased when booking this villa.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      addon: addon
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

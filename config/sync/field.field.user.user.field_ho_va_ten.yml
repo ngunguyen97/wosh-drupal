@@ -1,0 +1,20 @@
+uuid: a20b196d-8cd2-43b7-bbc1-c3004ccc9925
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_ho_va_ten
+  module:
+    - user
+id: user.user.field_ho_va_ten
+field_name: field_ho_va_ten
+entity_type: user
+bundle: user
+label: 'Họ và tên'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

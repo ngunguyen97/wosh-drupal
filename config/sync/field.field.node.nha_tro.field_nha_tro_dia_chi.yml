@@ -1,0 +1,19 @@
+uuid: 293b6e55-2131-4ae8-8c44-aa477d768dce
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nha_tro_dia_chi
+    - node.type.nha_tro
+id: node.nha_tro.field_nha_tro_dia_chi
+field_name: field_nha_tro_dia_chi
+entity_type: node
+bundle: nha_tro
+label: 'Địa chỉ'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

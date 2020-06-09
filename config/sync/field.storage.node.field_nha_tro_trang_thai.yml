@@ -1,0 +1,30 @@
+uuid: dc9e5b44-febd-4aa9-9868-a8fd4a08bd64
+langcode: vi
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_nha_tro_trang_thai
+field_name: field_nha_tro_trang_thai
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: con_phong
+      label: 'Còn Phòng'
+    -
+      value: het_phong
+      label: 'Hết Phòng'
+    -
+      value: hot
+      label: Hot
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

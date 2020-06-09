@@ -1,0 +1,22 @@
+uuid: fb6f4f69-96c6-4fb9-8600-ef5d520dc7f6
+langcode: vi
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 2GpWGoBUIsx5C9I5fCbgoXfO7MactdmscN7BrDboblI
+id: node.field_promo_discount
+field_name: field_promo_discount
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

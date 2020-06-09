@@ -1,0 +1,13 @@
+uuid: 9d09e689-3105-46a0-a9c5-38d6e680a110
+langcode: vi
+status: true
+dependencies:
+  module:
+    - comment
+_core:
+  default_config_hash: tWOIjSMobEWOFZddMkNqb9JySbOVwE1diC6NRqcfLTk
+id: comment_unpublish_action
+label: 'Bỏ công bố bài bình luận'
+type: comment
+plugin: 'entity:unpublish_action:comment'
+configuration: {  }

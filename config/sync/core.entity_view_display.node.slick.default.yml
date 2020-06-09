@@ -1,0 +1,40 @@
+uuid: a385a285-2959-40dc-980f-42a36826d252
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.field.node.slick.body
+    - field.field.node.slick.field_slick_image
+    - node.type.slick
+  module:
+    - image
+    - text
+    - user
+id: node.slick.default
+targetEntityType: node
+bundle: slick
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_slick_image:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
